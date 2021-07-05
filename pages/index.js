@@ -5,7 +5,6 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import useSWR from 'swr'
 import {
-    Flex,
     Text,
     Container,
     Box,
@@ -49,7 +48,7 @@ export default function Home() {
                   >
                     <Center>
                       <Stack direction="column" spacing={2}>
-                      <Image src={CariAnginImg} alt="pencari oksigen" w={200}/>
+                      <Image src={CariAnginImg} alt="pencari oksigen"/>
                   <Heading size="md" color="gray.600">Gagal mengambil data. Coba refresh ulang</Heading>
                       </Stack>
                     </Center>
@@ -73,9 +72,9 @@ export default function Home() {
 
 
     const data = allData.data.records;
-    console.log(allData)
+    // console.log(allData)
 
-    console.log('cari', region);
+    // console.log('cari', region);
 
     return (
         <div className={styles.container}>
@@ -111,13 +110,13 @@ export default function Home() {
                     <Box
                         maxH={600}>
                         <Stack spacing={4} direction="column" overflow="scroll" borderWidth="1px" borderRadius="lg" p={2}>
-                            {allData.data.records.length !== 0
+                            {data.length > 0
                                 ? data.map((d) => {
                                     return (<DataCard data={d} key={d.id}/>)
                                 })
                                 : <Box align="center" p={2}>
                                   <Heading as="h3" size="xl">😥</Heading> 
-                                <Text size="md">Data tidak ditemukan, coba cari kembali untuk daerah lainnya.</Text></Box>}
+                                <Text size="md">Data tidak ditemukan, coba cari kembali untuk daerah/kota/kabupaten lainnya.</Text></Box>}
                         </Stack>
                     </Box>
                 </Box>

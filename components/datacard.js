@@ -1,15 +1,6 @@
 import React from 'react'
 import {
-    Container,
-    Button,
     Stack,
-    Avatar,
-    Divider,
-    Heading,
-    Select,
-    Input,
-    Icon,
-    Textarea,
     Box,
     Tag,
     TagLabel,
@@ -24,9 +15,7 @@ import {
     Link
 } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-// import { ArrowBackIcon } from '@chakra-ui/icons'
 
-import {trigger} from 'swr'
 
 
 
