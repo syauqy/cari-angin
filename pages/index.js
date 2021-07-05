@@ -36,9 +36,9 @@ export default function Home() {
         setRegion(data.region)
     };
 
-    const allData = useSWR(`https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/${process.env.AIRTABLE_TABLE_ID}?filterByFormula=SEARCH(LOWER(%22${region}%22)%2C+LOWER(region))`, (url) => fetcher(url, {
+    const allData = useSWR(`https://api.airtable.com/v0/${process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID}/${process.env.NEXT_PUBLIC_AIRTABLE_TABLE_ID}?filterByFormula=SEARCH(LOWER(%22${region}%22)%2C+LOWER(region))`, (url) => fetcher(url, {
         headers: {
-            'Authorization': `Bearer ${process.env.AIRTABLE_API_KEY}`,
+            'Authorization': `Bearer ${process.env.NEXT_PUBLIC_AIRTABLE_API_KEY}`,
             'Accept': 'application/json'
         }
     }))
