@@ -120,8 +120,8 @@ export default function Home() {
                         </Stack>
                     </Box>
                 </Box>
-                <Divider mb={4}/> 
-            <Text mb={4} mt={4} fontSize="md">Project ini terbuka untuk siapapun yang ingin berkontribusi. <Link color="teal" isExternal href="https://github.com/syauqy/cari-angin">Lihat repo<ExternalLinkIcon mx="2px" /></Link></Text>
+                {/* <Divider mb={4}/> 
+            <Text mb={4} mt={4} fontSize="md">Project ini terbuka untuk siapapun yang ingin berkontribusi. <Link color="teal" isExternal href="https://github.com/syauqy/cari-angin">Lihat repo<ExternalLinkIcon mx="2px" /></Link></Text> */}
             </Container>
             
         </div>
